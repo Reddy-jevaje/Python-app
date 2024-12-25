@@ -7,7 +7,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh ' docker build -t Reddy-jevaje/python-app:$BUILD_NUMBER .'
+                sh ' docker build -t jathin1402/cloudhub:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh ' docker push Reddy-jevaje/python-app:$BUILD_NUMBER'
+                sh ' docker push jathin1402/cloudhub:$BUILD_NUMBER'
             }
         }
     }
